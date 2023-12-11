@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int a, b, ca, cb, nra = 0, nrb = 0;
+    
+    cin >> a >> b;
+    
+    ca = a;
+    cb = b;
+    
+    while(ca > 0)
+    {
+        if((ca & 1) == 1)
+        {
+            nra ++;
+        }
+        
+        ca = ca >> 1;
+    }
+    
+    while(cb > 0)
+    {
+        if((cb & 1) == 1)
+        {
+            nrb ++;
+        }
+        
+        cb = cb >> 1;
+    }
+    
+    if(nra <= nrb)
+    {
+        cout << b;
+    }
+    else
+    {
+        cout << a;
+    }
+
+    return 0;
+}
